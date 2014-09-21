@@ -37,25 +37,25 @@ namespace Storm {
 
     //Binding by index
     
-    void Query::Bind(int index, int value) {
+    void Query::BindIndex(int index, int value) {
         sqlite3_bind_int(statement, index, value);
     }
     
-    void Query::Bind(int index, double value) {
+    void Query::BindIndex(int index, double value) {
         sqlite3_bind_double(statement, index, value);
     }
     
-    void Query::Bind(int index, sqlite3_int64 value) {
+    void Query::BindIndex(int index, sqlite3_int64 value) {
         sqlite3_bind_int64(statement, index, value);
     }
     
-    void Query::Bind(int index, std::string value) {
+    void Query::BindIndex(int index, std::string value) {
         //Using the same technique as FMDB here
         //Have to use TRANSIENT because otherwise some memory gets freed somewhere and C++ strings mess up
         sqlite3_bind_text(statement, index, value.c_str(), -1, SQLITE_TRANSIENT);
     }
     
-    void Query::Bind(int index, const char *value) {
+    void Query::BindIndex(int index, const char *value) {
         sqlite3_bind_text(statement, index, value, -1, SQLITE_STATIC);
     }
     
@@ -90,6 +90,9 @@ namespace Storm {
     
     std::string Query::ColumnString(int index) {
         //Should be unsigned char and 64-bit
+        if (sqlite3_column_type(statement, index) == SQLITE_NULL) {
+            return "";
+        }
         return std::string((char*)sqlite3_column_text(statement, index));
     }
     

@@ -48,23 +48,29 @@ namespace Storm {
         
         //Parameter binding by index. Note that indexes begin at 1
         
-        void Bind(int index, int value);
-        void Bind(int index, double value);
-        void Bind(int index, sqlite3_int64 value);
-        void Bind(int index, std::string value);
-        void Bind(int index, const char * value);
+        void BindIndex(int index, int value);
+        void BindIndex(int index, double value);
+        void BindIndex(int index, sqlite3_int64 value);
+        void BindIndex(int index, std::string value);
+        void BindIndex(int index, const char * value);
 
         template <typename T>
-        void Bind(T value) {
-            Bind(NextBindingIndex(), value);
+        void BindValue(T value) {
+            BindIndex(NextBindingIndex(), value);
+        }
+        
+        template <typename T, typename... Args>
+        void BindValue(T value, Args... args) {
+            BindValue(value);
+            BindValue(args...);
         }
         
         //If you've used ?XYZ, :XYZ, @XYZ or $XYZ then the parameter name is that string
         int BindingIndex(std::string name);
         
         template <typename T>
-        void Bind(std::string name, T value) {
-            Bind(BindingIndex(name), value);
+        void BindNamed(std::string name, T value) {
+            BindIndex(BindingIndex(name), value);
         }
         
         //Use for updates

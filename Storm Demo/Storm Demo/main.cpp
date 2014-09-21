@@ -14,23 +14,28 @@ int main(int argc, const char * argv[]) {
     std::shared_ptr<Storm::Store> store(new Storm::Store(":memory:"));
     
     //Basic table creation
-    Storm::Query(store, "create table if not exists notes(id integer primary key, note text)").Execute();
+    Storm::Query(store, "create table notes(id integer primary key, note text, title text)").Execute();
     
     //Couple of basic insertions
     Storm::Query insert(store, "insert into notes (note) values (:name)");
-    insert.Bind(":name", std::string("Hello,world!"));
+    insert.BindNamed(":name", std::string("Hello,world!"));
     insert.Execute();
     
     Storm::Query insert2(store, "insert into notes (note) values (:name)");
-    insert2.Bind("My name is Thomas");
+    insert2.BindValue("My name is Thomas");
     insert2.Execute();
+    
+    Storm::Query insert3(store, "insert into notes (note, title) values (?,?)");
+    insert3.BindValue("Note content", "Note title");
+    insert3.Execute();
     
     //Present all results. The query is wrapped in curly brackets so that it gets finalized when it goes out of scope.
     {
         Storm::Query notes(store, "select * from notes");
         while (notes.Next()) {
-            std::cout << notes.ColumnInt(0) << ": " << notes.ColumnString(1) << std::endl;
+            std::cout << notes.ColumnInt(0) << ": " << notes.ColumnString(1) << " (" << notes.ColumnString(2) << ")" << std::endl;
         }
     }
+    
     return 0;
 }
