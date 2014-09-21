@@ -43,5 +43,20 @@ int main(int argc, const char * argv[]) {
         }
     }
     
+    {
+        /*
+         This will probably seem unfamiliar. What is happening here is that each row in the query is iterated over and that result is parsed to the lambda, which will then return the appropriate value. The main reason for doing this is provides an easy way of getting your own model objects without the need for writing factories or dealing with duplicate code.
+         */
+        Storm::Query notes(store, "select note from notes");
+        std::vector<std::string> noteList = notes.MapResults<std::string>([](Storm::Query * row) {
+            return row->ColumnString(0);
+        });
+        
+        //Then we just display the result, nothing fancy here
+        for (auto note : noteList) {
+            std::cout << note << std::endl;
+        }
+    }
+    
     return 0;
 }

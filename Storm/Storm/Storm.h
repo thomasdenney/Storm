@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sqlite3.h>
 #include <string>
+#include <vector>
 
 namespace Storm {
     
@@ -101,6 +102,15 @@ namespace Storm {
         double SingleDouble();
         int SingleInt();
         sqlite3_int64 SingleInt64();
+        
+        template <typename T, typename Func>
+        std::vector<T> MapResults(Func mapper) {
+            std::vector<T> results;
+            while (Next()) {
+                results.push_back(mapper(this));
+            }
+            return results;
+        }
     };
     
     //TODO: Strict single-thread concurrency mdoel
