@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E92E97D919CEBDDD00F1882D /* Storm.h in Headers */ = {isa = PBXBuildFile; fileRef = E92E97D819CEBDDD00F1882D /* Storm.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E92E97E319CEBDDD00F1882D /* StormTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E97E219CEBDDD00F1882D /* StormTests.m */; };
 		E92E97F619CEBE1100F1882D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E92E97F519CEBE1100F1882D /* libsqlite3.dylib */; };
 		E92E97F819CEBE3600F1882D /* Storm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92E97F719CEBE3600F1882D /* Storm.cpp */; };
 /* End PBXBuildFile section */
@@ -17,9 +16,6 @@
 		E92E97D319CEBDDD00F1882D /* Storm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Storm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92E97D719CEBDDD00F1882D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E92E97D819CEBDDD00F1882D /* Storm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Storm.h; sourceTree = "<group>"; };
-		E92E97DE19CEBDDD00F1882D /* StormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E92E97E119CEBDDD00F1882D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E92E97E219CEBDDD00F1882D /* StormTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StormTests.m; sourceTree = "<group>"; };
 		E92E97F519CEBE1100F1882D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E92E97F719CEBE3600F1882D /* Storm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Storm.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -33,13 +29,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E92E97DB19CEBDDD00F1882D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -48,7 +37,6 @@
 			children = (
 				E92E97F519CEBE1100F1882D /* libsqlite3.dylib */,
 				E92E97D519CEBDDD00F1882D /* Storm */,
-				E92E97DF19CEBDDD00F1882D /* StormTests */,
 				E92E97D419CEBDDD00F1882D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				E92E97D319CEBDDD00F1882D /* Storm.framework */,
-				E92E97DE19CEBDDD00F1882D /* StormTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,23 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				E92E97D719CEBDDD00F1882D /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E92E97DF19CEBDDD00F1882D /* StormTests */ = {
-			isa = PBXGroup;
-			children = (
-				E92E97E219CEBDDD00F1882D /* StormTests.m */,
-				E92E97E019CEBDDD00F1882D /* Supporting Files */,
-			);
-			path = StormTests;
-			sourceTree = "<group>";
-		};
-		E92E97E019CEBDDD00F1882D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E92E97E119CEBDDD00F1882D /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -129,23 +99,6 @@
 			productReference = E92E97D319CEBDDD00F1882D /* Storm.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E92E97DD19CEBDDD00F1882D /* StormTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E92E97E919CEBDDD00F1882D /* Build configuration list for PBXNativeTarget "StormTests" */;
-			buildPhases = (
-				E92E97DA19CEBDDD00F1882D /* Sources */,
-				E92E97DB19CEBDDD00F1882D /* Frameworks */,
-				E92E97DC19CEBDDD00F1882D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = StormTests;
-			productName = StormTests;
-			productReference = E92E97DE19CEBDDD00F1882D /* StormTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -156,9 +109,6 @@
 				ORGANIZATIONNAME = "Programming Thomas";
 				TargetAttributes = {
 					E92E97D219CEBDDD00F1882D = {
-						CreatedOnToolsVersion = 6.0;
-					};
-					E92E97DD19CEBDDD00F1882D = {
 						CreatedOnToolsVersion = 6.0;
 					};
 				};
@@ -176,20 +126,12 @@
 			projectRoot = "";
 			targets = (
 				E92E97D219CEBDDD00F1882D /* Storm */,
-				E92E97DD19CEBDDD00F1882D /* StormTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E92E97D119CEBDDD00F1882D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E92E97DC19CEBDDD00F1882D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -204,14 +146,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E92E97F819CEBE3600F1882D /* Storm.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E92E97DA19CEBDDD00F1882D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E92E97E319CEBDDD00F1882D /* StormTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,38 +268,6 @@
 			};
 			name = Release;
 		};
-		E92E97EA19CEBDDD00F1882D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = StormTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		E92E97EB19CEBDDD00F1882D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = StormTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -383,14 +285,6 @@
 			buildConfigurations = (
 				E92E97E719CEBDDD00F1882D /* Debug */,
 				E92E97E819CEBDDD00F1882D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		E92E97E919CEBDDD00F1882D /* Build configuration list for PBXNativeTarget "StormTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E92E97EA19CEBDDD00F1882D /* Debug */,
-				E92E97EB19CEBDDD00F1882D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
