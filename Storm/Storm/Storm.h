@@ -5,8 +5,9 @@
 #include <sqlite3.h>
 #include <string>
 
-//Storm header
 namespace Storm {
+    
+    //General database access. Other APIs require that you use this as a shared_ptr, so please create one for it (doing this hugely simplifies memory management as well)
     class Store {
     public:
         sqlite3 * db;
@@ -15,17 +16,28 @@ namespace Storm {
         ~Store();
     };
     
+    //Used for carrying out SELECT queries on the database. A good accessing pattern here is:
+    
+    /*
+     {
+        Storm::Query query(store, "select * from table");
+        while (query.Next()) {
+            //Do something with query.Column*()
+        }
+     }
+     */
+    
+    //By placing your access inside of curly brackets the query object will go out of scope and therefore SQLite will have the opportunity to free up resources
+    
     class Query {
     public:
-        //Properties (should be immutable, need to work out how to do that)
-        
-        //This needs to be a shared_ptr because I needed to make it explicit that the Query needs a strong reference, rather than just a pointer that could be freed. (Actually, does it need a strong reference?)
-//        std::shared_ptr<Store> database;
         std::string query;
         sqlite3_stmt * statement;
+        std::shared_ptr<Store> store;
         
-        //Creates the SQLite prepared statement
-        Query(std::shared_ptr<Store> database, std::string query);
+        //Creates the SQLite prepared statement. *Please* use shared_ptr because it simplifies memory management massively
+        Query(std::shared_ptr<Store> store, std::string query);
+        
         //Destroys the SQLite prepared statement
         ~Query();
         

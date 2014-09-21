@@ -14,9 +14,10 @@ namespace Storm {
     
     //Query
     
-    Query::Query(std::shared_ptr<Store> database, std::string query) {
+    Query::Query(std::shared_ptr<Store> store, std::string query) {
         this->query = query;
-        int status = sqlite3_prepare_v2(database->db, query.c_str(), -1, &statement, NULL);
+        this->store = store;
+        int status = sqlite3_prepare_v2(store->db, query.c_str(), -1, &statement, NULL);
         if (status != SQLITE_OK) {
             std::cout << "Error preparing statement" << std::endl;
         }
