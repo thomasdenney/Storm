@@ -49,6 +49,12 @@ namespace Storm {
             BindValue(args...);
         }
         
+        //Shortcut method for executing updates on the database more simply
+        template <typename... Args>
+        static bool Update(std::shared_ptr<Store> store, std::string query, Args... args) {
+            return Query(store, query, args...).Execute();
+        }
+        
         //Destroys the SQLite prepared statement
         ~Query();
         

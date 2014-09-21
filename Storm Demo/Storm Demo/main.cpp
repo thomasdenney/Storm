@@ -14,9 +14,10 @@ int main(int argc, const char * argv[]) {
     std::shared_ptr<Storm::Store> store(new Storm::Store(":memory:"));
     
     //Basic table creation
-    Storm::Query(store, "create table notes(id integer primary key, note text, title text)").Execute();
+    Storm::Query::Update(store, "create table notes(id integer primary key, note text, title text)");
     
-    //Couple of basic insertions
+    //Demonstrate the various ways that you can do an insertion
+    //(I changed the API quite a bit during development, hence why there are several ways of doing it)
     Storm::Query insert(store, "insert into notes (note) values (:name)");
     insert.BindNamed(":name", std::string("Hello,world!"));
     insert.Execute();
@@ -31,6 +32,8 @@ int main(int argc, const char * argv[]) {
     
     Storm::Query insert4(store, "insert into notes (note, title) values(?,?)", "Hello world", "This note is great");
     insert4.Execute();
+    
+    Storm::Query::Update(store, "insert into notes (note,title) values (?,?)", "Another note content", "Another note title");
     
     //Present all results. The query is wrapped in curly brackets so that it gets finalized when it goes out of scope.
     {
