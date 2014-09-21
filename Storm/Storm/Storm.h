@@ -32,6 +32,9 @@ namespace Storm {
     //By placing your access inside of curly brackets the query object will go out of scope and therefore SQLite will have the opportunity to free up resources
     
     class Query {
+    private:
+        int bindingIndex = 0;
+        int NextBindingIndex();
     public:
         std::string query;
         sqlite3_stmt * statement;
@@ -43,7 +46,12 @@ namespace Storm {
         //Destroys the SQLite prepared statement
         ~Query();
         
-        //Parameter binding by index
+        //Parameter binding by index. Note that indexes begin at 1
+        void Bind(int value);
+        void Bind(double value);
+        void Bind(sqlite3_int64 value);
+        void Bind(std::string value);
+        
         void Bind(int index, int value);
         void Bind(int index, double value);
         void Bind(int index, sqlite3_int64 value);

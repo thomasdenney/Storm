@@ -24,6 +24,31 @@ namespace Storm {
     
     //Parameter binding by index. This doesn't do any testing for the index being valid or all of the parameters being filled. I'm (dangerously) assuming that the programmer is smart enough to make sure that this is true
     
+    int Query::NextBindingIndex() {
+        bindingIndex++;
+        return bindingIndex;
+    }
+    
+    //These functions look stupid. There must be a sensible way to do this in C++
+    
+    void Query::Bind(int value) {
+        Bind(NextBindingIndex(), value);
+    }
+    
+    void Query::Bind(double value) {
+        Bind(NextBindingIndex(), value);
+    }
+    
+    void Query::Bind(sqlite3_int64 value) {
+        Bind(NextBindingIndex(), value);
+    }
+    
+    void Query::Bind(std::string value) {
+        Bind(NextBindingIndex(), value);
+    }
+    
+    //Binding by index
+    
     void Query::Bind(int index, int value) {
         sqlite3_bind_int(statement, index, value);
     }
@@ -44,6 +69,16 @@ namespace Storm {
     bool Query::Next() {
         //Could check for other values here, but I don't need to for Storm v0.0.1
         return sqlite3_step(statement) == SQLITE_ROW;
+    }
+    
+    bool Query::Execute() {
+        int result = sqlite3_step(statement);
+        bool success = result == SQLITE_OK || result == SQLITE_DONE;
+        if (!success) {
+            std::cout << "Warning: Error executing statement '" << query << "'" << std::endl;
+            std::cout << sqlite3_errmsg(store->db) << std::endl;
+        }
+        return success;
     }
     
     //Columns
