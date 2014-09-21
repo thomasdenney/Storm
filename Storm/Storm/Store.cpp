@@ -1,4 +1,4 @@
-#include "Storm.h"
+#include "Store.h"
 
 namespace Storm {
     Store::Store(const char * databaseName) {

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Programming Thomas. All rights reserved.
 //
 
-#include "Storm.h"
+#include "Query.h"
 
 namespace Storm {
     Query::Query(std::shared_ptr<Store> store, std::string query) {
