@@ -13,6 +13,15 @@ namespace Storm {
             //Do something with query.Column*()
         }
      }
+     
+     //Or:
+     
+     {
+        Storm::Query query(store, "select * from table");
+        std::vector<Model> results = query.MapResults<Model>([](Storm::Query * row) {
+            return //Some model object based on row columns;
+        //});
+     }
      */
     
     //By placing your access inside of curly brackets the query object will go out of scope and therefore SQLite will have the opportunity to free up resources
@@ -97,8 +106,6 @@ namespace Storm {
             return results;
         }
     };
-    
-    //TODO: Strict single-thread concurrency mdoel
 }
 
 #endif
