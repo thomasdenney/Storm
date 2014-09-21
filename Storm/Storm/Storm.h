@@ -14,6 +14,8 @@ namespace Storm {
         Store(const char * databaseName);
         //Closes the database
         ~Store();
+        
+        int LastInsertID();
     };
     
     //Used for carrying out SELECT queries on the database. A good accessing pattern here is:
@@ -38,6 +40,8 @@ namespace Storm {
         //Creates the SQLite prepared statement. *Please* use shared_ptr because it simplifies memory management massively
         Query(std::shared_ptr<Store> store, std::string query);
         
+        //Experimental Query with parameters
+        
         //Destroys the SQLite prepared statement
         ~Query();
         
@@ -54,6 +58,8 @@ namespace Storm {
         int SingleInt();
         sqlite3_int64 SingleInt64();
     };
+    
+    //TODO: Strict single-thread concurrency mdoel
 }
 
 #endif

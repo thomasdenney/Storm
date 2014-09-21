@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		E92E97D919CEBDDD00F1882D /* Storm.h in Headers */ = {isa = PBXBuildFile; fileRef = E92E97D819CEBDDD00F1882D /* Storm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E92E97F619CEBE1100F1882D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E92E97F519CEBE1100F1882D /* libsqlite3.dylib */; };
-		E92E97F819CEBE3600F1882D /* Storm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92E97F719CEBE3600F1882D /* Storm.cpp */; };
+		E92E97F819CEBE3600F1882D /* Store.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92E97F719CEBE3600F1882D /* Store.cpp */; };
+		E92E97FC19CEC7A900F1882D /* Query.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92E97FB19CEC7A900F1882D /* Query.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,7 +18,8 @@
 		E92E97D719CEBDDD00F1882D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E92E97D819CEBDDD00F1882D /* Storm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Storm.h; sourceTree = "<group>"; };
 		E92E97F519CEBE1100F1882D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		E92E97F719CEBE3600F1882D /* Storm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Storm.cpp; sourceTree = "<group>"; };
+		E92E97F719CEBE3600F1882D /* Store.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Store.cpp; sourceTree = "<group>"; };
+		E92E97FB19CEC7A900F1882D /* Query.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Query.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +54,9 @@
 		E92E97D519CEBDDD00F1882D /* Storm */ = {
 			isa = PBXGroup;
 			children = (
-				E92E97F719CEBE3600F1882D /* Storm.cpp */,
 				E92E97D819CEBDDD00F1882D /* Storm.h */,
+				E92E97F719CEBE3600F1882D /* Store.cpp */,
+				E92E97FB19CEC7A900F1882D /* Query.cpp */,
 				E92E97D619CEBDDD00F1882D /* Supporting Files */,
 			);
 			path = Storm;
@@ -145,7 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E92E97F819CEBE3600F1882D /* Storm.cpp in Sources */,
+				E92E97FC19CEC7A900F1882D /* Query.cpp in Sources */,
+				E92E97F819CEBE3600F1882D /* Store.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
