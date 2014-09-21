@@ -30,22 +30,22 @@ namespace Storm {
     }
     
     //These functions look stupid. There must be a sensible way to do this in C++
-    
-    void Query::Bind(int value) {
-        Bind(NextBindingIndex(), value);
-    }
-    
-    void Query::Bind(double value) {
-        Bind(NextBindingIndex(), value);
-    }
-    
-    void Query::Bind(sqlite3_int64 value) {
-        Bind(NextBindingIndex(), value);
-    }
-    
-    void Query::Bind(std::string value) {
-        Bind(NextBindingIndex(), value);
-    }
+
+//    void Query::Bind(int value) {
+//        Bind(NextBindingIndex(), value);
+//    }
+//    
+//    void Query::Bind(double value) {
+//        Bind(NextBindingIndex(), value);
+//    }
+//    
+//    void Query::Bind(sqlite3_int64 value) {
+//        Bind(NextBindingIndex(), value);
+//    }
+//    
+//    void Query::Bind(std::string value) {
+//        Bind(NextBindingIndex(), value);
+//    }
     
     //Binding by index
     
@@ -63,8 +63,20 @@ namespace Storm {
     
     void Query::Bind(int index, std::string value) {
         //Using the same technique as FMDB here
-        sqlite3_bind_text(statement, index, value.c_str(), -1, SQLITE_STATIC);
+        //Have to use TRANSIENT because otherwise some memory gets freed somewhere and C++ strings mess up
+        sqlite3_bind_text(statement, index, value.c_str(), -1, SQLITE_TRANSIENT);
     }
+    
+    void Query::Bind(int index, const char *value) {
+        sqlite3_bind_text(statement, index, value, -1, SQLITE_STATIC);
+    }
+    
+    //Binding by name
+    
+    int Query::BindingIndex(std::string name) {
+        return sqlite3_bind_parameter_index(statement, name.c_str());
+    }
+    
     
     bool Query::Next() {
         //Could check for other values here, but I don't need to for Storm v0.0.1
