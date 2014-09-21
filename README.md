@@ -14,13 +14,14 @@ Storm is an experimental C++ wrapper for SQLite. I'm writing it as part of devel
 * Opening/closing SQLite database safely
 * Basic querying
 * Basic data access
+* Parameter binding with variadic access
 
 ##Todo
 
+The development process is currently just working out as me adding things as I need them...
+
 * Strict concurrent only access to the database (will be implemented using C++11 threads and lambdas rather than GCD and blocks)
-* Support for updates and query parameters
 * Fully support all data types
-* Eventually break stuff into separate files
 
 ##License
 

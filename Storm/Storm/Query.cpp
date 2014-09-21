@@ -89,7 +89,7 @@ namespace Storm {
     }
     
     std::string Query::ColumnString(int index) {
-        //Should be unsigned char and 64-bit
+        //Have to check for null otherwise std::string throws a hissy fit
         if (sqlite3_column_type(statement, index) == SQLITE_NULL) {
             return "";
         }
