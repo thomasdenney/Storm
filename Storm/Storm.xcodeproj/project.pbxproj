@@ -57,8 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				E92E981219CEEA7500F1882D /* Store.h */,
-				E92E97D819CEBDDD00F1882D /* Query.h */,
 				E92E97F719CEBE3600F1882D /* Store.cpp */,
+				E92E97D819CEBDDD00F1882D /* Query.h */,
 				E92E97FB19CEC7A900F1882D /* Query.cpp */,
 				E92E97D619CEBDDD00F1882D /* Supporting Files */,
 				E92E981319CEEAF000F1882D /* Storm.h */,
