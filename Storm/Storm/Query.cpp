@@ -29,24 +29,12 @@ namespace Storm {
         return bindingIndex;
     }
     
-    //These functions look stupid. There must be a sensible way to do this in C++
-
-//    void Query::Bind(int value) {
-//        Bind(NextBindingIndex(), value);
-//    }
-//    
-//    void Query::Bind(double value) {
-//        Bind(NextBindingIndex(), value);
-//    }
-//    
-//    void Query::Bind(sqlite3_int64 value) {
-//        Bind(NextBindingIndex(), value);
-//    }
-//    
-//    void Query::Bind(std::string value) {
-//        Bind(NextBindingIndex(), value);
-//    }
+    //Binding by name
     
+    int Query::BindingIndex(std::string name) {
+        return sqlite3_bind_parameter_index(statement, name.c_str());
+    }
+
     //Binding by index
     
     void Query::Bind(int index, int value) {
@@ -70,13 +58,6 @@ namespace Storm {
     void Query::Bind(int index, const char *value) {
         sqlite3_bind_text(statement, index, value, -1, SQLITE_STATIC);
     }
-    
-    //Binding by name
-    
-    int Query::BindingIndex(std::string name) {
-        return sqlite3_bind_parameter_index(statement, name.c_str());
-    }
-    
     
     bool Query::Next() {
         //Could check for other values here, but I don't need to for Storm v0.0.1
