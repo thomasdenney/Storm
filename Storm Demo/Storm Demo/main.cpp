@@ -29,6 +29,9 @@ int main(int argc, const char * argv[]) {
     insert3.BindValue("Note content", "Note title");
     insert3.Execute();
     
+    Storm::Query insert4(store, "insert into notes (note, title) values(?,?)", "Hello world", "This note is great");
+    insert4.Execute();
+    
     //Present all results. The query is wrapped in curly brackets so that it gets finalized when it goes out of scope.
     {
         Storm::Query notes(store, "select * from notes");

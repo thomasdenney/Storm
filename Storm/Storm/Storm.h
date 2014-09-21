@@ -43,6 +43,12 @@ namespace Storm {
         //Creates the SQLite prepared statement. *Please* use shared_ptr because it simplifies memory management massively
         Query(std::shared_ptr<Store> store, std::string query);
         
+        //Alternative, using variadic template stuff
+        template <typename... Args>
+        Query(std::shared_ptr<Store> store, std::string query, Args... args) : Query(store, query) {
+            BindValue(args...);
+        }
+        
         //Destroys the SQLite prepared statement
         ~Query();
         
