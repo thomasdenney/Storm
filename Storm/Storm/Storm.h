@@ -15,7 +15,7 @@ namespace Storm {
         //Closes the database
         ~Store();
         
-        int LastInsertID();
+        sqlite3_int64 LastInsertID();
     };
     
     //Used for carrying out SELECT queries on the database. A good accessing pattern here is:

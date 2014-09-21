@@ -11,4 +11,9 @@ namespace Storm {
     Store::~Store() {
         sqlite3_close(db);
     }
+    
+    sqlite3_int64 Store::LastInsertID() {
+        //Can do some safety checks here but I don't need to yet
+        return sqlite3_last_insert_rowid(db);
+    }
 }
