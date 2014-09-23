@@ -6,7 +6,7 @@ Storm is an experimental C++ wrapper for SQLite. I'm writing it as part of devel
 
 * Add this repository as a git submodule
 * Add the framework project to your Xcode workspace
-* Link your app with either the iOS or OS X framework
+* Link your app with either the iOS or OS X target
 
 ##Current features
 
