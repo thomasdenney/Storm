@@ -20,7 +20,9 @@ namespace Storm {
     class Store {
     public:
         sqlite3 * db;
-        Store(const char * databaseName);
+        
+        Store(const char * databaseName, bool readOnly);
+        Store(const char * databaseName) : Store(databaseName, false) {}
         //Closes the database
         ~Store();
         
