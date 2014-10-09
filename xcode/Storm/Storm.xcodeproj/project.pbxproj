@@ -11,9 +11,9 @@
 		E96E616519E672C9000B75C7 /* Query.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E96E616019E672C9000B75C7 /* Query.cpp */; };
 		E96E616619E672C9000B75C7 /* Query.h in Headers */ = {isa = PBXBuildFile; fileRef = E96E616119E672C9000B75C7 /* Query.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E96E616719E672C9000B75C7 /* Store.h in Headers */ = {isa = PBXBuildFile; fileRef = E96E616219E672C9000B75C7 /* Store.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E96E616819E672C9000B75C7 /* Storm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E96E616319E672C9000B75C7 /* Storm.cpp */; };
 		E96E616919E672C9000B75C7 /* Storm.h in Headers */ = {isa = PBXBuildFile; fileRef = E96E616419E672C9000B75C7 /* Storm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E96E616B19E672D9000B75C7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E96E616A19E672D9000B75C7 /* libsqlite3.dylib */; };
+		E96E618519E67505000B75C7 /* Store.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E96E618419E67505000B75C7 /* Store.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,9 @@
 		E96E616019E672C9000B75C7 /* Query.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Query.cpp; path = ../../../src/Query.cpp; sourceTree = "<group>"; };
 		E96E616119E672C9000B75C7 /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Query.h; path = ../../../src/Query.h; sourceTree = "<group>"; };
 		E96E616219E672C9000B75C7 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Store.h; path = ../../../src/Store.h; sourceTree = "<group>"; };
-		E96E616319E672C9000B75C7 /* Storm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Storm.cpp; path = ../../../src/Storm.cpp; sourceTree = "<group>"; };
 		E96E616419E672C9000B75C7 /* Storm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Storm.h; path = ../../../src/Storm.h; sourceTree = "<group>"; };
 		E96E616A19E672D9000B75C7 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		E96E618419E67505000B75C7 /* Store.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Store.cpp; path = ../../../src/Store.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +71,10 @@
 		E96E614919E672B2000B75C7 /* Storm */ = {
 			isa = PBXGroup;
 			children = (
+				E96E618419E67505000B75C7 /* Store.cpp */,
 				E96E616019E672C9000B75C7 /* Query.cpp */,
 				E96E616119E672C9000B75C7 /* Query.h */,
 				E96E616219E672C9000B75C7 /* Store.h */,
-				E96E616319E672C9000B75C7 /* Storm.cpp */,
 				E96E616419E672C9000B75C7 /* Storm.h */,
 				E96E614A19E672B2000B75C7 /* Supporting Files */,
 			);
@@ -215,7 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E96E616519E672C9000B75C7 /* Query.cpp in Sources */,
-				E96E616819E672C9000B75C7 /* Storm.cpp in Sources */,
+				E96E618519E67505000B75C7 /* Store.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
