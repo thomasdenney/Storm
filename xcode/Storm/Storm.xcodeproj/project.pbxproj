@@ -14,6 +14,11 @@
 		E96E616919E672C9000B75C7 /* Storm.h in Headers */ = {isa = PBXBuildFile; fileRef = E96E616419E672C9000B75C7 /* Storm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E96E616B19E672D9000B75C7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E96E616A19E672D9000B75C7 /* libsqlite3.dylib */; };
 		E96E618519E67505000B75C7 /* Store.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E96E618419E67505000B75C7 /* Store.cpp */; };
+		E96E61A119E6DBBD000B75C7 /* Store.h in Headers */ = {isa = PBXBuildFile; fileRef = E96E616219E672C9000B75C7 /* Store.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E96E61A219E6DBBF000B75C7 /* Storm.h in Headers */ = {isa = PBXBuildFile; fileRef = E96E616419E672C9000B75C7 /* Storm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E96E61A319E6DBC1000B75C7 /* Query.h in Headers */ = {isa = PBXBuildFile; fileRef = E96E616119E672C9000B75C7 /* Query.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E96E61A419E6DBC5000B75C7 /* Query.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E96E616019E672C9000B75C7 /* Query.cpp */; };
+		E96E61A519E6DBC6000B75C7 /* Store.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E96E618419E67505000B75C7 /* Store.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,8 @@
 		E96E616419E672C9000B75C7 /* Storm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Storm.h; path = ../../../src/Storm.h; sourceTree = "<group>"; };
 		E96E616A19E672D9000B75C7 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E96E618419E67505000B75C7 /* Store.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Store.cpp; path = ../../../src/Store.cpp; sourceTree = "<group>"; };
+		E96E618B19E6DB95000B75C7 /* Storm Touch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Storm Touch.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E96E619519E6DB95000B75C7 /* Storm TouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Storm TouchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +47,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E96E614F19E672B3000B75C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E96E618719E6DB95000B75C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E96E619219E6DB95000B75C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,6 +85,8 @@
 			children = (
 				E96E614719E672B2000B75C7 /* Storm.framework */,
 				E96E615219E672B3000B75C7 /* StormTests.xctest */,
+				E96E618B19E6DB95000B75C7 /* Storm Touch.framework */,
+				E96E619519E6DB95000B75C7 /* Storm TouchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +142,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E96E618819E6DB95000B75C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E96E61A119E6DBBD000B75C7 /* Store.h in Headers */,
+				E96E61A219E6DBBF000B75C7 /* Storm.h in Headers */,
+				E96E61A319E6DBC1000B75C7 /* Query.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +190,41 @@
 			productReference = E96E615219E672B3000B75C7 /* StormTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E96E618A19E6DB95000B75C7 /* Storm Touch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E96E619B19E6DB95000B75C7 /* Build configuration list for PBXNativeTarget "Storm Touch" */;
+			buildPhases = (
+				E96E618619E6DB95000B75C7 /* Sources */,
+				E96E618719E6DB95000B75C7 /* Frameworks */,
+				E96E618819E6DB95000B75C7 /* Headers */,
+				E96E618919E6DB95000B75C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Storm Touch";
+			productName = "Storm Touch";
+			productReference = E96E618B19E6DB95000B75C7 /* Storm Touch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E96E619419E6DB95000B75C7 /* Storm TouchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E96E619E19E6DB95000B75C7 /* Build configuration list for PBXNativeTarget "Storm TouchTests" */;
+			buildPhases = (
+				E96E619119E6DB95000B75C7 /* Sources */,
+				E96E619219E6DB95000B75C7 /* Frameworks */,
+				E96E619319E6DB95000B75C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Storm TouchTests";
+			productName = "Storm TouchTests";
+			productReference = E96E619519E6DB95000B75C7 /* Storm TouchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,6 +238,12 @@
 						CreatedOnToolsVersion = 6.0;
 					};
 					E96E615119E672B3000B75C7 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					E96E618A19E6DB95000B75C7 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					E96E619419E6DB95000B75C7 = {
 						CreatedOnToolsVersion = 6.0;
 					};
 				};
@@ -188,6 +262,8 @@
 			targets = (
 				E96E614619E672B2000B75C7 /* Storm */,
 				E96E615119E672B3000B75C7 /* StormTests */,
+				E96E618A19E6DB95000B75C7 /* Storm Touch */,
+				E96E619419E6DB95000B75C7 /* Storm TouchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -201,6 +277,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E96E615019E672B3000B75C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E96E618919E6DB95000B75C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E96E619319E6DB95000B75C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -224,6 +314,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				E96E615719E672B3000B75C7 /* StormTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E96E618619E6DB95000B75C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E96E61A419E6DBC5000B75C7 /* Query.cpp in Sources */,
+				E96E61A519E6DBC6000B75C7 /* Store.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E96E619119E6DB95000B75C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +484,84 @@
 			};
 			name = Release;
 		};
+		E96E619C19E6DB95000B75C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Storm Touch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E96E619D19E6DB95000B75C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Storm Touch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E96E619F19E6DB95000B75C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Storm TouchTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E96E61A019E6DB95000B75C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Storm TouchTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -403,6 +587,22 @@
 			buildConfigurations = (
 				E96E615E19E672B3000B75C7 /* Debug */,
 				E96E615F19E672B3000B75C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E96E619B19E6DB95000B75C7 /* Build configuration list for PBXNativeTarget "Storm Touch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E96E619C19E6DB95000B75C7 /* Debug */,
+				E96E619D19E6DB95000B75C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E96E619E19E6DB95000B75C7 /* Build configuration list for PBXNativeTarget "Storm TouchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E96E619F19E6DB95000B75C7 /* Debug */,
+				E96E61A019E6DB95000B75C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
