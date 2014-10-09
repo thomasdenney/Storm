@@ -35,7 +35,7 @@ namespace Storm {
 
         sqlite3_int64 LastInsertID();
 
-        void InTransaction(void(*transaction)());
+        void InTransaction(std::function<void()> transaction);
     };
 }
 

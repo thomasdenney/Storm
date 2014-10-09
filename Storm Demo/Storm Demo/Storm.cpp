@@ -36,7 +36,7 @@ namespace Storm {
         UpdateAndExecute("commit transaction");
     }
 
-    void Store::InTransaction(void (*transaction)()) {
+    void Store::InTransaction(std::function<void()> transaction) {
         BeginTransaction();
         transaction();
         EndTransaction();

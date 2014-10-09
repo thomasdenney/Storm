@@ -30,10 +30,12 @@ int main(int argc, const char * argv[]) {
     
     //Demonstrate the various ways that you can do an insertion
     //(I changed the API quite a bit during development, hence why there are several ways of doing it)
-    Storm::Query insert(store, "insert into notes (title, note) values (:title, :note)");
-    insert.BindNamed(":title", "Title 1");
-    insert.BindNamed(":note", "Contents 1");
-    insert.Execute();
+    store->InTransaction([&]() {
+        Storm::Query insert(store, "insert into notes (title, note) values (:title, :note)");
+        insert.BindNamed(":title", "Title 1");
+        insert.BindNamed(":note", "Contents 1");
+        insert.Execute();
+    });
     
     Storm::Query insert2(store, "insert into notes (title, note) values (?,?)");
     insert2.BindValue("Title 2");
