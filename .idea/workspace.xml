@@ -6,16 +6,7 @@
     </generated>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c6ef2cb-1c2c-4039-9629-2c00b34e416f" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Storm Demo/Storm Demo/Query.cpp" afterPath="$PROJECT_DIR$/src/Query.cpp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Storm Demo/Storm Demo/Query.h" afterPath="$PROJECT_DIR$/src/Query.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Storm Demo/Storm Demo/Store.h" afterPath="$PROJECT_DIR$/src/Store.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Storm Demo/Storm Demo/Storm.cpp" afterPath="$PROJECT_DIR$/src/Storm.cpp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Storm Demo/Storm Demo/Storm.h" afterPath="$PROJECT_DIR$/src/Storm.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Storm Demo/Storm Demo/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="4c6ef2cb-1c2c-4039-9629-2c00b34e416f" name="Default" comment="" />
     <ignored path="stormcpp.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,10 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27459955" vertical-offset="0" max-vertical-offset="437">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
               <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
               <folding />
             </state>
@@ -64,7 +55,7 @@
       <file leaf-file-name="Store.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Store.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="720">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
               <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="e#185#204#0" expanded="true" />
@@ -73,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Storm.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Storm.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Storm.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="298" max-vertical-offset="735">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.45080093" vertical-offset="298" max-vertical-offset="735">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -404,6 +395,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Store.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="720">
@@ -416,16 +415,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Storm.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="298" max-vertical-offset="735">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27459955" vertical-offset="0" max-vertical-offset="437">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.45080093" vertical-offset="298" max-vertical-offset="735">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>

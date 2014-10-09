@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-#include "Storm.h"
+#include <Storm/Storm.h>
 
 class NoteViewModel {
 public:

@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E96E615719E672B3000B75C7 /* StormTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E96E615619E672B3000B75C7 /* StormTests.m */; };
+		E96E616519E672C9000B75C7 /* Query.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E96E616019E672C9000B75C7 /* Query.cpp */; };
+		E96E616619E672C9000B75C7 /* Query.h in Headers */ = {isa = PBXBuildFile; fileRef = E96E616119E672C9000B75C7 /* Query.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E96E616719E672C9000B75C7 /* Store.h in Headers */ = {isa = PBXBuildFile; fileRef = E96E616219E672C9000B75C7 /* Store.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E96E616819E672C9000B75C7 /* Storm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E96E616319E672C9000B75C7 /* Storm.cpp */; };
+		E96E616919E672C9000B75C7 /* Storm.h in Headers */ = {isa = PBXBuildFile; fileRef = E96E616419E672C9000B75C7 /* Storm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E96E616B19E672D9000B75C7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E96E616A19E672D9000B75C7 /* libsqlite3.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E96E614719E672B2000B75C7 /* Storm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Storm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E96E614B19E672B2000B75C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E96E615219E672B3000B75C7 /* StormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E96E615519E672B3000B75C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E96E615619E672B3000B75C7 /* StormTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StormTests.m; sourceTree = "<group>"; };
+		E96E616019E672C9000B75C7 /* Query.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Query.cpp; path = ../../../src/Query.cpp; sourceTree = "<group>"; };
+		E96E616119E672C9000B75C7 /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Query.h; path = ../../../src/Query.h; sourceTree = "<group>"; };
+		E96E616219E672C9000B75C7 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Store.h; path = ../../../src/Store.h; sourceTree = "<group>"; };
+		E96E616319E672C9000B75C7 /* Storm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Storm.cpp; path = ../../../src/Storm.cpp; sourceTree = "<group>"; };
+		E96E616419E672C9000B75C7 /* Storm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Storm.h; path = ../../../src/Storm.h; sourceTree = "<group>"; };
+		E96E616A19E672D9000B75C7 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E96E614319E672B2000B75C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E96E616B19E672D9000B75C7 /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E96E614F19E672B3000B75C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E96E613D19E672B2000B75C7 = {
+			isa = PBXGroup;
+			children = (
+				E96E616A19E672D9000B75C7 /* libsqlite3.dylib */,
+				E96E614919E672B2000B75C7 /* Storm */,
+				E96E615319E672B3000B75C7 /* StormTests */,
+				E96E614819E672B2000B75C7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E96E614819E672B2000B75C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E96E614719E672B2000B75C7 /* Storm.framework */,
+				E96E615219E672B3000B75C7 /* StormTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E96E614919E672B2000B75C7 /* Storm */ = {
+			isa = PBXGroup;
+			children = (
+				E96E616019E672C9000B75C7 /* Query.cpp */,
+				E96E616119E672C9000B75C7 /* Query.h */,
+				E96E616219E672C9000B75C7 /* Store.h */,
+				E96E616319E672C9000B75C7 /* Storm.cpp */,
+				E96E616419E672C9000B75C7 /* Storm.h */,
+				E96E614A19E672B2000B75C7 /* Supporting Files */,
+			);
+			path = Storm;
+			sourceTree = "<group>";
+		};
+		E96E614A19E672B2000B75C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E96E614B19E672B2000B75C7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E96E615319E672B3000B75C7 /* StormTests */ = {
+			isa = PBXGroup;
+			children = (
+				E96E615619E672B3000B75C7 /* StormTests.m */,
+				E96E615419E672B3000B75C7 /* Supporting Files */,
+			);
+			path = StormTests;
+			sourceTree = "<group>";
+		};
+		E96E615419E672B3000B75C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E96E615519E672B3000B75C7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E96E614419E672B2000B75C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E96E616919E672C9000B75C7 /* Storm.h in Headers */,
+				E96E616719E672C9000B75C7 /* Store.h in Headers */,
+				E96E616619E672C9000B75C7 /* Query.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E96E614619E672B2000B75C7 /* Storm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E96E615A19E672B3000B75C7 /* Build configuration list for PBXNativeTarget "Storm" */;
+			buildPhases = (
+				E96E614219E672B2000B75C7 /* Sources */,
+				E96E614319E672B2000B75C7 /* Frameworks */,
+				E96E614419E672B2000B75C7 /* Headers */,
+				E96E614519E672B2000B75C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Storm;
+			productName = Storm;
+			productReference = E96E614719E672B2000B75C7 /* Storm.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E96E615119E672B3000B75C7 /* StormTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E96E615D19E672B3000B75C7 /* Build configuration list for PBXNativeTarget "StormTests" */;
+			buildPhases = (
+				E96E614E19E672B3000B75C7 /* Sources */,
+				E96E614F19E672B3000B75C7 /* Frameworks */,
+				E96E615019E672B3000B75C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StormTests;
+			productName = StormTests;
+			productReference = E96E615219E672B3000B75C7 /* StormTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E96E613E19E672B2000B75C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Programming Thomas";
+				TargetAttributes = {
+					E96E614619E672B2000B75C7 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					E96E615119E672B3000B75C7 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = E96E614119E672B2000B75C7 /* Build configuration list for PBXProject "Storm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E96E613D19E672B2000B75C7;
+			productRefGroup = E96E614819E672B2000B75C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E96E614619E672B2000B75C7 /* Storm */,
+				E96E615119E672B3000B75C7 /* StormTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E96E614519E672B2000B75C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E96E615019E672B3000B75C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E96E614219E672B2000B75C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E96E616519E672C9000B75C7 /* Query.cpp in Sources */,
+				E96E616819E672C9000B75C7 /* Storm.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E96E614E19E672B3000B75C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E96E615719E672B3000B75C7 /* StormTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E96E615819E672B3000B75C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E96E615919E672B3000B75C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E96E615B19E672B3000B75C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Storm/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E96E615C19E672B3000B75C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Storm/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E96E615E19E672B3000B75C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StormTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E96E615F19E672B3000B75C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StormTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E96E614119E672B2000B75C7 /* Build configuration list for PBXProject "Storm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E96E615819E672B3000B75C7 /* Debug */,
+				E96E615919E672B3000B75C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E96E615A19E672B3000B75C7 /* Build configuration list for PBXNativeTarget "Storm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E96E615B19E672B3000B75C7 /* Debug */,
+				E96E615C19E672B3000B75C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E96E615D19E672B3000B75C7 /* Build configuration list for PBXNativeTarget "StormTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E96E615E19E672B3000B75C7 /* Debug */,
+				E96E615F19E672B3000B75C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E96E613E19E672B2000B75C7 /* Project object */;
+}
