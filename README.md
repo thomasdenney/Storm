@@ -1,4 +1,4 @@
-![Storm](storm.png)
+![Storm](artwork/storm.png)
 
 Storm is an experimental C++ wrapper for SQLite. I'm writing it as part of development on [Play Time 2.0](http://programmingthomas.com/play-time/). It is far from feature complete and I'll probably break lots of things with the API. Please don't use it yet.
 
