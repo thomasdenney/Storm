@@ -27,6 +27,7 @@
 		E96E617519E6730A000B75C7 /* Demo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Demo; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96E617F19E67313000B75C7 /* Storm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Storm.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Storm-akavwrwpiztqqqaylxahagelllua/Build/Products/Debug/Storm.framework"; sourceTree = "<group>"; };
 		E96E618119E67328000B75C7 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../main.cpp; sourceTree = "<group>"; };
+		E96E618319E67402000B75C7 /* include.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = include.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				E96E618119E67328000B75C7 /* main.cpp */,
+				E96E618319E67402000B75C7 /* include.h */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
